@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	port := "8081"
+	port := "8082"
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("./static"))))
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
@@ -15,4 +15,5 @@ func main() {
 	})
 	fmt.Printf("Server listening on http://localhost:%s\n", port)
 	log.Fatal(http.ListenAndServe(":"+port, nil))
+	fmt.Print("hello")
 }
