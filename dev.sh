@@ -10,7 +10,7 @@ AIR_PID=$!
 browser-sync start \
   --proxy "localhost:8082" \
   --files --files "static/**/*" \
-  --browser false \
+  --browser "false" \
   # --logLevel debug
 
 # When BrowserSync exits, kill Air
