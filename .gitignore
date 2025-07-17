@@ -36,3 +36,5 @@ data/
 # .vscode/
 
 tmp/
+backend/tmp/
+backend/build-errors.log
