@@ -12,7 +12,7 @@
         ></script>
     </head>
     <body class="p-8 bg-slate-950 text-white">
-        <h1 class="text-2xl mb-4">aaahs cool</h1>
+        <h1 class="text-2xl mb-4">My Todo List</h1>
         <form
             hx-post="/add"
             hx-target="#todo-list"
@@ -25,6 +25,7 @@
                 class="border border-gray-700 rounded bg-slate-900 p-2 mr-2"
                 placeholder="New task"
                 required
+                hx-on::after-request="this.value=''"
             />
             <button
                 class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded"
@@ -33,6 +34,6 @@
             </button>
         </form>
 
-        <div id="todo-list" hx-get="/" hx-trigger="load"></div>
+        <div id="todo-list" hx-get="/todos" hx-trigger="load"></div>
     </body>
 </html>
